@@ -1,0 +1,1 @@
+import{ethers as o}from"ethers";import t from"fs";const n=async t=>o.Wallet.fromMnemonic(t).address;let s="";const e=t.readFileSync("mnemonics_fish.txt").toString().split(/\r?\n/);for(const o of e)try{const t=await n(o);s+=t+"\n",console.log(t)}catch(o){console.log(o)}t.writeFileSync("fish.txt",s);

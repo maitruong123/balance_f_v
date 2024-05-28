@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "VIva Bot V2",
+    "version": "2.0.0",
+    "description": "Viva Bot V2.0.0",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "permissions": [
+      "*://*.bcsocial.net/*"],
+    "browser_action": {
+      "default_icon": {
+        "16": "logo.png",
+        "48": "logo.png",
+        "128": "logo.png"
+      }
+    },
+    "icons": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://*.bcsocial.net/*"],
+        "js": ["viva.js"],
+        "all_frames": true
+      }
+    ]
+  }

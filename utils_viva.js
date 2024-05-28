@@ -1,0 +1,1 @@
+import r from"fs";export function getData(){try{const o=r.readFileSync("data_viva.json","utf8");return JSON.parse(o)}catch(r){console.error("Error reading or parsing file:",r)}}
